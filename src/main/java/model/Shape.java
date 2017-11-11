@@ -1,11 +1,12 @@
 package model;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Point;
 
 import controller.ColorString;
 
-public class Shape {
+public abstract class Shape {
 
 	protected long id;
 	protected Point start;
@@ -23,8 +24,7 @@ public class Shape {
 
 	}
 
-	public Shape(long id, Point start, Point end, Color color, User user) {
-		setId(id);
+	public Shape(Point start, Point end, Color color, User user) {
 		setStart(start);
 		setEnd(end);
 		setColor(color);
@@ -123,4 +123,8 @@ public class Shape {
 	public void setStrColor(String strColor) {
 		this.strColor = strColor;
 	}
+
+	public abstract void draw(Graphics g);
+
+	public abstract boolean contains(Point point);
 }
