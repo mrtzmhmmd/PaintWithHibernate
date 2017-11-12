@@ -13,11 +13,6 @@ public class Rectangle extends Shape {
 
 	public Rectangle(Point start, Point end, Color color, User user) {
 		super(start, end, color, user);
-		setType();
-	}
-
-	public void setType() {
-		type = 3;
 	}
 
 	@Override

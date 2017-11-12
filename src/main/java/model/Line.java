@@ -12,13 +12,8 @@ public class Line extends Shape {
 
 	}
 
-	public Line(Color color, Point start, Point end, User user) {
+	public Line(Point start, Point end, Color color, User user) {
 		super(start, end, color, user);
-		setType();
-	}
-
-	public void setType() {
-		type = 2;
 	}
 
 	@Override

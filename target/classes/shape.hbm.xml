@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//atee Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="model.Shape" discriminator-value="type">
+		<id name="id" type="long">
+			<generator class="identity"></generator>
+		</id>
+		<discriminator column="type" type="string"></discriminator>
+		<property name="startX" type="int" />
+		<property name="startY" type="int" />
+		<property name="endX" type="int" />
+		<property name="endY" type="int" />
+		<property name="strColor" type="string" />
+		<many-to-one name="User" column="username" class="model.User">
+		</many-to-one>
+		<subclass name="model.Rectangle" discriminator-value="1"></subclass>
+		<subclass name="model.Circle" discriminator-value="2"></subclass>
+		<subclass name="model.Line" discriminator-value="3"></subclass>
+		<subclass name="model.RoundRectangle" discriminator-value="4"></subclass>
+	</class>
+</hibernate-mapping>

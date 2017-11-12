@@ -13,11 +13,6 @@ public class RoundRectangle extends Shape {
 
 	public RoundRectangle(Point start, Point end, Color color, User user) {
 		super(start, end, color, user);
-		setType();
-	}
-
-	public void setType() {
-		type = 4;
 	}
 
 	@Override

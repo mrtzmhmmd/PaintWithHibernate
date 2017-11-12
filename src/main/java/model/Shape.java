@@ -13,7 +13,7 @@ public abstract class Shape {
 	protected Point end;
 	protected Color color;
 	protected User user;
-	protected int type;
+	protected String type;
 	protected int startX;
 	protected int startY;
 	protected int endX;
@@ -76,11 +76,11 @@ public abstract class Shape {
 		this.user = user;
 	}
 
-	public int getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

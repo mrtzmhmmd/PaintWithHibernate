@@ -13,9 +13,8 @@ public class Circle extends Shape {
 
 	}
 
-	public Circle(Color color, Point start, Point end, User user) {
+	public Circle(Point start, Point end, Color color, User user) {
 		super(start, end, color, user);
-		this.type = 2;
 		radius = ((int) Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2)));
 	}
 
