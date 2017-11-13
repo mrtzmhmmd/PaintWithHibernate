@@ -35,13 +35,12 @@ public class Panel extends JPanel {
 	private Shape shape = null;
 	private double scale = 0.2;
 	protected static double zoomFactor = 1;
-	private static EntityManager entityManager;
 
 	Panel(final User user) throws SQLException {
 		setBounds(0, 0, 500, 500);
 		setBackground(Color.WHITE);
-		//entityManager = new ShapeEntityManager(user);
-		//shapes = entityManager.loadShape();
+		// entityManager = new ShapeEntityManager(user);
+		shapes = EntityManager.loadShape(user);
 
 		addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
@@ -63,11 +62,10 @@ public class Panel extends JPanel {
 						if (s.contains(p)) {
 							repaint();
 							s.setColor(color);
-							/*try {
-							//	entityManager.updateShape(s, color);
-							} catch (SQLException e1) {
-								e1.printStackTrace();
-							}*/
+							/*
+							 * try { // entityManager.updateShape(s, color); } catch (SQLException e1) {
+							 * e1.printStackTrace(); }
+							 */
 						}
 					}
 				}

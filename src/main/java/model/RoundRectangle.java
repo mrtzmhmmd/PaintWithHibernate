@@ -15,6 +15,10 @@ public class RoundRectangle extends Shape {
 		super(start, end, color, user);
 	}
 
+	public RoundRectangle(Point start, Point end, Color color, User user, String type) {
+		super(start, end, color, user, type);
+	}
+
 	@Override
 	public void draw(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;

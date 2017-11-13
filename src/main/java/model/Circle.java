@@ -17,6 +17,10 @@ public class Circle extends Shape {
 		super(start, end, color, user);
 		radius = ((int) Math.sqrt(Math.pow(end.x - start.x, 2) + Math.pow(end.y - start.y, 2)));
 	}
+	
+	public Circle(Point start, Point end, Color color, User user, String type) {
+		super(start, end, color, user, type);
+	}
 
 	@Override
 	public void draw(Graphics g) {

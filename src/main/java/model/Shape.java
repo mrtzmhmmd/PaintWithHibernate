@@ -36,6 +36,19 @@ public abstract class Shape {
 		setStrColor(ColorString.colorToString(color));
 	}
 
+	public Shape(Point start, Point end, Color color, User user, String type) {
+		setStart(start);
+		setEnd(end);
+		setColor(color);
+		setUser(user);
+		setStartX(start.x);
+		setStartY(start.y);
+		setEndX(end.x);
+		setEndY(end.y);
+		setStrColor(ColorString.colorToString(color));
+		this.type = type;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -78,10 +91,6 @@ public abstract class Shape {
 
 	public String getType() {
 		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public int getStartX() {

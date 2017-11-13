@@ -16,9 +16,9 @@
 		<property name="strColor" type="string" />
 		<many-to-one name="User" column="username" class="model.User">
 		</many-to-one>
-		<subclass name="model.Rectangle" discriminator-value="1"></subclass>
-		<subclass name="model.Circle" discriminator-value="2"></subclass>
-		<subclass name="model.Line" discriminator-value="3"></subclass>
-		<subclass name="model.RoundRectangle" discriminator-value="4"></subclass>
+		<subclass name="model.Rectangle" discriminator-value="Rectangle"></subclass>
+		<subclass name="model.Circle" discriminator-value="Circle"></subclass>
+		<subclass name="model.Line" discriminator-value="Line"></subclass>
+		<subclass name="model.RoundRectangle" discriminator-value="RoundRectangle"></subclass>
 	</class>
 </hibernate-mapping>

@@ -14,6 +14,10 @@ public class Rectangle extends Shape {
 	public Rectangle(Point start, Point end, Color color, User user) {
 		super(start, end, color, user);
 	}
+	
+	public Rectangle(Point start, Point end, Color color, User user, String type) {
+		super(start, end, color, user, type);
+	}
 
 	@Override
 	public void draw(Graphics g) {
